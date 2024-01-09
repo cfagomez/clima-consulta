@@ -6,17 +6,36 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    font-size: 16px;  
+    font-size: 16px;
+    margin: 0;
   }
   
 h1, h2, h3 {
     font-family: Merriweather, serif;
+    margin: 0;
 }
 
 .contenedor {
 
     margin: 0 auto;
     text-align: center;
+
+}
+
+/* HEADER */
+
+header {
+
+    background-color: rgb(130, 48, 56);
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    padding: 25px;
+    text-align: start;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-bottom: 10px solid rgb(30, 0, 14);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 
 }
 
@@ -27,7 +46,7 @@ form {
     width: 95%;
     margin: 0 auto;
     background-color: rgb(244, 247, 190);
-    padding: 20px 40px;
+    padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
@@ -48,6 +67,7 @@ input[type="text"] {
     padding: 5px 10px;
     border-radius: 50px;
     border: 2px solid rgb(0, 0, 0);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
 
@@ -70,13 +90,14 @@ input[type="submit"] {
     border-radius: 25px;
     font-weight: 600;
     cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
 
 input[type="submit"]:hover {
 
-    color: rgb(229, 247, 125);
-    border: 2px solid rgb(229, 247, 125);
+    color: rgb(222, 186, 111);
+    border: 2px solid rgb(222, 186, 111);
 
 }
 
