@@ -22,6 +22,21 @@ h1, h2, h3 {
 
 }
 
+.m-top {
+
+  margin-top: 50px;
+
+}
+
+.flex-column {
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 5px;
+
+}
+
 /* HEADER */
 
 header {
@@ -39,12 +54,19 @@ header {
 
 }
 
+/* MAIN */
+
+main {
+
+  width: 95%;
+  margin: 0 auto;
+
+}
+
 /* FORMULARIO */
 
 form {
 
-    width: 95%;
-    margin: 0 auto;
     background-color: rgb(244, 247, 190);
     padding: 40px;
     border-radius: 10px;
@@ -104,6 +126,16 @@ input[type="submit"]:hover {
 .campo:first-of-type {
 
     margin-bottom: 10px;
+
+}
+
+/* NO RESULTADO */
+
+.p-no-resultado {
+
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
 
 }
 

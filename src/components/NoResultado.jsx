@@ -5,8 +5,8 @@ const NoResultado = () => {
     const {noResultado} = useClima()
 
   return (
-    <div>
-      {noResultado}
+    <div className='contenedor m-top'>
+      <p className='p-no-resultado'>{noResultado}</p>
     </div>
   )
 }
