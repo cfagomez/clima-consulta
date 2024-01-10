@@ -10,6 +10,7 @@ const ClimaProvider = ({children}) => {
     })
     const [resultado, setResultado] = useState(null)
     const [noResultado, setNoResultado] = useState(null)
+    const [cargando, setCargando] = useState(false)
 
     const handleChangeDatos = (e) => {
 
@@ -26,6 +27,7 @@ const ClimaProvider = ({children}) => {
 
         setResultado(null)
         setNoResultado(null)
+        setCargando(true)
 
         const {ciudad, pais} = datos
 
@@ -44,6 +46,10 @@ const ClimaProvider = ({children}) => {
         } catch (error) {
 
             setNoResultado('No se han encontrado resultados')
+
+        } finally {
+
+            setCargando(false)
 
         }
 
@@ -66,7 +72,7 @@ const ClimaProvider = ({children}) => {
     }
 
   return (
-    <ClimaContext.Provider value={{handleChangeDatos, datos, handleSubmit, resultado, noResultado}}>
+    <ClimaContext.Provider value={{handleChangeDatos, datos, handleSubmit, resultado, noResultado, cargando}}>
         {children}
     </ClimaContext.Provider>
   )
