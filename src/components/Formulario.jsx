@@ -2,13 +2,15 @@ import useClima from "../hooks/useClima"
 
 const Formulario = () => {
 
-    const {handleChangeDatos, datos} = useClima()
+    const {handleChangeDatos, datos, handleSubmit} = useClima()
 
     const {ciudad, pais} = datos
     
   return (
     <div className='contenedor'>
-        <form>
+        <form
+            onSubmit={handleSubmit}
+        >
             <div className='campo'>
                 <label>Ciudad:</label>
                 <input 
