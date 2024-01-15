@@ -1,8 +1,9 @@
 import useClima from "../hooks/useClima"
+import Error from "./Error"
 
 const Formulario = () => {
 
-    const {handleChangeDatos, datos, handleSubmit} = useClima()
+    const {handleChangeDatos, datos, handleSubmit, error} = useClima()
 
     const {ciudad, pais} = datos
     
@@ -11,6 +12,9 @@ const Formulario = () => {
         <form
             onSubmit={handleSubmit}
         >
+            {
+                error && <Error />
+            }
             <div className='campo'>
                 <label>Ciudad:</label>
                 <input 

@@ -11,6 +11,7 @@ const ClimaProvider = ({children}) => {
     const [resultado, setResultado] = useState(null)
     const [noResultado, setNoResultado] = useState(null)
     const [cargando, setCargando] = useState(false)
+    const [error, setError] = useState(false)
 
     const handleChangeDatos = (e) => {
 
@@ -42,6 +43,10 @@ const ClimaProvider = ({children}) => {
             const respuestaClima = await fetch(urlClima)
             const resultadoClima = await respuestaClima.json()
             setResultado(resultadoClima)
+            setDatos({
+                ciudad: '',
+                pais: ''
+            })
 
         } catch (error) {
 
@@ -57,11 +62,13 @@ const ClimaProvider = ({children}) => {
 
     const handleSubmit = (e) => {
 
+        setError(false)
+
         e.preventDefault()
 
         if (Object.values(datos).includes('')) {
 
-            console.log('Debe completar todos los datos')
+            setError('Debes completar todos los campos')
 
             return
 
@@ -72,7 +79,7 @@ const ClimaProvider = ({children}) => {
     }
 
   return (
-    <ClimaContext.Provider value={{handleChangeDatos, datos, handleSubmit, resultado, noResultado, cargando}}>
+    <ClimaContext.Provider value={{handleChangeDatos, datos, handleSubmit, resultado, noResultado, cargando, error}}>
         {children}
     </ClimaContext.Provider>
   )

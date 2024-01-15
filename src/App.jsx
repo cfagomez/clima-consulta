@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <header>
-        <h1>Consulta Clima</h1>
+        <h1>Clima App</h1>
       </header>
       <main>
         <Formulario />
