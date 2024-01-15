@@ -35,7 +35,7 @@ const ClimaProvider = ({children}) => {
         try {
 
             const appId = import.meta.env.VITE_API_KEY
-            const url = `http://api.openweathermap.org/geo/1.0/direct?q=${ciudad},${pais}&limit=1&appid=${appId}`
+            const url = `https://api.openweathermap.org/geo/1.0/direct?q=${ciudad},${pais}&limit=1&appid=${appId}`
             const respuesta = await fetch(url)
             const resultado = await respuesta.json()
             const {lat, lon} = resultado[0]
